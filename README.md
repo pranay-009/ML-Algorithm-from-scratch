@@ -1,2 +1,2 @@
-# ML_algorithm_from_scratch
+# ML Algorithm from scratch
 This repository contains some of the traditional Machine Learning algorithm from scratch
