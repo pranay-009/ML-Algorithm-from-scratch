@@ -24,7 +24,8 @@ class LogisticRegression:
       out_y=num.dot(x,self.weights) + self.bias
       predict=1/(1+num.exp(-out_y))
 
-      error=predict-y
+      error=predict-y.T
+      error = np.reshape( error,x.shape[0] ) 
       dw=1/(n_samples)*(num.dot(x.T,error))
       db=1/(n_samples)*num.sum(error)
       self.weights=self.weights - self.learning_rate*dw
